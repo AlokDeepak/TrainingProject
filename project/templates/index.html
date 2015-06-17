@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+      <title>Practo</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <img src="http://i1.wp.com/www.nextbigwhat.com/wp-content/uploads/2015/02/practo.png?fit=230%2C130" alt="Search Results">
+
+      <style type="text/css">
+            #txtfield1,#txtfield2{
+                float: left;    
+                width: 400px;    
+                height: 50px;
+                margin-left: 300px;
+                margin-top: 80px;
+            }
+            #sbutton{
+                float: left;
+                margin-left: 300px;
+                margin-top: 80px;
+            }
+            img{
+                margin-left: 50px;
+                margin-top: 30px;
+            }
+            a{
+                margin-left: 1100px;
+                margin-top: 150px;
+            }
+      </style>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+          <form class="form-horizontal" action="/search" method="post">
+            <div class="form-group">
+              <div class="col-sm-10">
+                <input id="txtfield1"class="form-control" placeholder="Location" name ="location" id="focusedInput" type="text">
+              </div>
+              <div class="col-sm-10">
+                <input id="txtfield1" class="form-control" placeholder="Speciality" name="speciality"id="focusedInput" type="text">
+                <button id="sbutton"type="submit" class="btn btn-success">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div>
+            <a href="http://127.0.0.1:5000/admin" type="button" class="btn btn-link">Admin Page</a>
+        </div>
+
+    </body>
+</html>
+    

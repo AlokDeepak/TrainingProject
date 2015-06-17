@@ -1,0 +1,25 @@
+<style>
+    table, tr, th, td {
+        border: 1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <th>Doctor ID</th>
+        <th>Degree</th>
+        <th>Instituion</th>
+        <th>Year Of Passing Number</th>
+    </tr>
+    {% for education in education %}
+        <tr>
+            <td>{{ education.doctorID }}</td>
+            <td>{{ education.degree }}</td>
+            <td>{{ education.institution }}</td>
+            <td>{{ education.yearOfPassing }}</td>
+            <td><a href="/education/add/{{ education.id }}">Edit</a></td>
+            <td><a href="/education/delete/{{ education.id }}">Delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="/education/add/new">Add New Entry Education</a>
+<a href="/">Home</a>

@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Practo : Your Health App</title>
+        <style>
+            body{
+                background-color: white;
+            }
+            img{
+                margin-left:  50px;
+                
+            }
+            h1{
+                text-align: center;
+                background-color: rgba(64,64,64,1);
+            }
+            .title{
+                margin-left: 100px;
+                background-color: rgba(255, 0, 0, 0.4);
+            }
+            .posts{
+                margin-left : 5px;
+            
+            }
+            .content{
+                margin-left:  20px;
+                margin-right:  20px;
+            }
+            .author{
+                margin-left: 1040px;
+            }
+            table, tr, th, td {
+                border: 1px solid black;
+            }
+        </style>
+
+
+        <script type = "text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <img src="http://i1.wp.com/www.nextbigwhat.com/wp-content/uploads/2015/02/practo.png?fit=230%2C130" alt="Search Results">        
+        <h1>results !</h1>
+        <script type = "text/javascript">
+            $(document).ready(function(){
+    
+                for(var i=1;i<=no_of_result;i++){
+
+                    $('<div>').attr("class","resultRow")
+                             .text(i) 
+                             .appendTo('body');
+                }
+            });
+
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Recommendations</th>
+                <th>Experience</th>
+            </tr>
+            {% for doctor in doctors %}
+                <tr>
+                    <td>{{ doctor.name }}</td>
+                    <td>{{ doctor.email }}</td>
+                    <td>{{ doctor.gender }}</td>
+                    <td>{{ doctor.recommendations }}</td>
+                    <td>{{ doctor.experience }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <p><a href="http://127.0.0.1:5000"> Home </a></p>
+    </body>
+</html>

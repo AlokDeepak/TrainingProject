@@ -1,0 +1,23 @@
+<style>
+    table, tr, th, td {
+        border: 1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <th>Clinic Name</th>
+        <th>Location</th>
+        <th>Address</th>
+    </tr>
+    {% for clinic in clinics %}
+        <tr>
+            <td>{{ clinic.clinicName }}</td>
+            <td>{{ clinic.location }}</td>
+            <td>{{ clinic.address }}</td>
+            <td><a href="/clinics/add/{{ clinic.id }}">Edit</a></td>
+            <td><a href="/clinics/delete/{{ clinic.id }}">Delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="/clinics/add/new">Add New Clinic</a>
+<a href="/">Home</a>

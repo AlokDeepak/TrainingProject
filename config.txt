@@ -1,0 +1,4 @@
+username:testUser
+password:root
+port:3306
+dbname:practo1

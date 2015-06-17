@@ -1,0 +1,21 @@
+<style>
+    table, tr, th, td {
+        border: 1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <th>Doctor ID</th>
+        <th>Speciality ID</th>
+    </tr>
+    {% for hasSpeciality in hasSpeciality %}
+        <tr>
+            <td>{{ hasSpeciality.doctorID }}</td>
+            <td>{{ hasSpeciality.specialityID }}</td>
+            <td><a href="/hasSpeciality/add/{{ hasSpeciality.id }}">Edit</a></td>
+            <td><a href="/hasSpeciality/delete/{{ hasSpeciality.id }}">Delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="/hasSpeciality/add/new">Add New Doctor-Speciality</a>
+<a href="/">Home</a>

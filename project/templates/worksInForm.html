@@ -1,0 +1,30 @@
+<div>
+    <form method="POST" action="/worksIn">
+    	<table>
+    		<tr>
+    			<td>{{ form.doctorID.label }}</td>
+    			<td>{{ form.doctorID() }}</td>
+    		</tr>
+    		<tr>
+    			<td>{{ form.clinicID.label }}</td>
+    			<td>{{ form.clinicID() }}</td>
+    		</tr>
+    		<tr>
+    			<td>{{ form.fees.label }}</td>
+    			<td>{{ form.fees() }}</td>
+    		</tr>
+            <tr>
+                <td>{{ form.mobileNumber.label }}</td>
+                <td>{{ form.mobileNumber() }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.timings.label }}</td>
+                <td>{{ form.timings() }}</td>
+            </tr>
+    	</table>
+        <div style="display:none">{{ form.id.label }}: {{ form.id() }}</div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>

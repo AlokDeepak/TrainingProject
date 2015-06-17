@@ -1,0 +1,23 @@
+<style>
+    table, tr, th, td {
+        border: 1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <th>Doctor ID</th>
+        <th>Description</th>
+        <th>Username</th>
+    </tr>
+    {% for reviews in reviews %}
+        <tr>
+            <td>{{ reviews.doctorID }}</td>
+            <td>{{ reviews.description }}</td>
+            <td>{{ reviews.username }}</td>
+            <td><a href="/review/add/{{ reviews.id }}">Edit</a></td>
+            <td><a href="/review/delete/{{ reviews.id }}">Delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="/review/add/new">Add New Review</a>
+<a href="/">Home</a>

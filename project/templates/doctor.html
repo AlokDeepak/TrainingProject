@@ -1,0 +1,27 @@
+<style>
+    table, tr, th, td {
+        border: 1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Recommendations</th>
+        <th>Experience</th>
+    </tr>
+    {% for doctor in doctors %}
+        <tr>
+            <td>{{ doctor.name }}</td>
+            <td>{{ doctor.email }}</td>
+            <td>{{ doctor.gender }}</td>
+            <td>{{ doctor.recommendations }}</td>
+            <td>{{ doctor.experience }}</td>
+            <td><a href="/doctors/add/{{ doctor.id }}">Edit</a></td>
+            <td><a href="/doctors/delete/{{ doctor.id }}">Delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="/doctors/add/new">Add New Doctor</a>
+<a href="/">Home</a>

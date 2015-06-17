@@ -1,0 +1,18 @@
+<div>
+    <form method="POST" action="/hasSpeciality">
+    	<table>
+    		<tr>
+    			<td>{{ form.doctorID.label }}</td>
+    			<td>{{ form.doctorID() }}</td>
+    		</tr>
+            <tr>
+                <td>{{ form.specialityID.label }}</td>
+                <td>{{ form.specialityID() }}</td>
+            </tr>
+    	</table>
+        <div style="display:none">{{ form.id.label }}: {{ form.id() }}</div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>

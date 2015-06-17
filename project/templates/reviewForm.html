@@ -1,0 +1,22 @@
+<div>
+    <form method="POST" action="/review">
+    	<table>
+    		<tr>
+    			<td>{{ form.doctorID.label }}</td>
+    			<td>{{ form.doctorID() }}</td>
+    		</tr>
+            <tr>
+                <td>{{ form.description.label }}</td>
+                <td>{{ form.description() }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.username.label }}</td>
+                <td>{{ form.username() }}</td>
+            </tr>
+    	</table>
+        <div style="display:none">{{ form.id.label }}: {{ form.id() }}</div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>

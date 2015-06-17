@@ -1,0 +1,26 @@
+<div>
+    <form method="POST" action="/education">
+    	<table>
+    		<tr>
+    			<td>{{ form.doctorID.label }}</td>
+    			<td>{{ form.doctorID() }}</td>
+    		</tr>
+    		<tr>
+    			<td>{{ form.degree.label }}</td>
+    			<td>{{ form.degree() }}</td>
+    		</tr>
+    		<tr>
+    			<td>{{ form.institution.label }}</td>
+    			<td>{{ form.institution() }}</td>
+    		</tr>
+            <tr>
+                <td>{{ form.yearOfPassing.label }}</td>
+                <td>{{ form.yearOfPassing() }}</td>
+            </tr>
+    	</table>
+        <div style="display:none">{{ form.id.label }}: {{ form.id() }}</div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>

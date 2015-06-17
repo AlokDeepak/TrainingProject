@@ -1,0 +1,10 @@
+Instructions to run project
+
+-- Create a database in mysql named practo
+-- Create a database user <testUser>
+-- Provide password as <root>
+-- Execute below command
+     pip install flask-wtf
+     pip install Jinja2
+-- Execute below command
+     python run.py

@@ -1,0 +1,30 @@
+<div>
+    <form method="POST" action="/doctors">
+    	<table>
+    		<tr>
+    			<td>{{ form.name.label }}</td>
+    			<td>{{ form.name() }}</td>
+    		</tr>
+    		<tr>
+    			<td>{{ form.email.label }}</td>
+    			<td>{{ form.email() }}</td>
+    		</tr>
+    		<tr>
+    			<td>{{ form.gender.label }} (M/F)</td>
+    			<td>{{ form.gender() }}</td>
+    		</tr>
+    		<tr>
+    			<td>{{ form.recommendations.label }}</td>
+    			<td>{{ form.recommendations() }}</td>
+    		</tr>
+    		<tr>
+    			<td>{{ form.experience.label }}</td>
+    			<td>{{ form.experience() }}</td>
+    		</tr>
+    	</table>
+        <div style="display:none">{{ form.id.label }}: {{ form.id() }}</div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>

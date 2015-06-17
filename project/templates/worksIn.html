@@ -1,0 +1,27 @@
+<style>
+    table, tr, th, td {
+        border: 1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <th>Doctor ID</th>
+        <th>Clinic ID</th>
+        <th>Fees</th>
+        <th>Contact Number</th>
+        <th>Timings</th>
+    </tr>
+    {% for worksIn in worksIn %}
+        <tr>
+            <td>{{ worksIn.doctorID }}</td>
+            <td>{{ worksIn.clinicID }}</td>
+            <td>{{ worksIn.fees }}</td>
+            <td>{{ worksIn.mobileNumber }}</td>
+            <td>{{ worksIn.timings }}</td>
+            <td><a href="/worksIn/add/{{ worksIn.id }}">Edit</a></td>
+            <td><a href="/worksIn/delete/{{ worksIn.id }}">Delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="/worksIn/add/new">Add New Entry for Doctor-Clinic</a>
+<a href="/">Home</a>

@@ -1,0 +1,19 @@
+<style>
+    table, tr, th, td {
+        border: 1px solid black;
+    }
+</style>
+<table>
+    <tr>
+        <th>Speciality</th>
+    </tr>
+    {% for speciality in speciality %}
+        <tr>
+            <td>{{ speciality.speciality }}</td>
+            <td><a href="/speciality/add/{{ speciality.id }}">Edit</a></td>
+            <td><a href="/speciality/delete/{{ speciality.id }}">Delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="/speciality/add/new">Add New Specialization</a>
+<a href="/">Home</a>

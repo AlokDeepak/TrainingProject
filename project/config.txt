@@ -1,0 +1,4 @@
+testUser
+root
+3306
+practo1

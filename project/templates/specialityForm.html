@@ -1,0 +1,14 @@
+<div>
+    <form method="POST" action="/speciality">
+    	<table>
+    		<tr>
+    			<td>{{ form.specialityName.label }}</td>
+    			<td>{{ form.specialityName() }}</td>
+    		</tr>
+    	</table>
+        <div style="display:none">{{ form.id.label }}: {{ form.id() }}</div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>

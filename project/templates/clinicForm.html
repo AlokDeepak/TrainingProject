@@ -1,0 +1,22 @@
+<div>
+    <form method="POST" action="/clinics">
+    	<table>
+    		<tr>
+    			<td>{{ form.clinicName.label }}</td>
+    			<td>{{ form.clinicName() }}</td>
+    		</tr>
+    		<tr>
+    			<td>{{ form.location.label }}</td>
+    			<td>{{ form.location() }}</td>
+    		</tr>
+    		<tr>
+    			<td>{{ form.address.label }}</td>
+    			<td>{{ form.address() }}</td>
+    		</tr>
+    	</table>
+        <div style="display:none">{{ form.id.label }}: {{ form.id() }}</div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>
